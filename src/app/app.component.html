@@ -4,16 +4,22 @@
   <table class="table">
     <thead style="background-color: aqua">
       <tr>
+        <!-- click on the header 'name' in table to sorting based on names, bind event by calling nameSort(animals)  -->
         <th (click)="nameSort(animals)">Name</th>
+        <!-- click on the header 'Weight' in table to sorting based on weights, bind event by calling weightSort(animals)  -->
         <th (click)="weightSort(animals)">Weight</th>
 
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let Animalname of animals">  
 
+      <!-- Loop the animals array of Objects render in row and columns  -->
+      <tr *ngFor="let Animalname of animals">
+
+        <!-- Animal names  -->
         <td>{{Animalname.name}}</td>
 
+        <!-- Animal Weights  -->
         <td>{{Animalname.weight}}</td>
 
       </tr>
